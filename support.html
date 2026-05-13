@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxora Support</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7ff;
+  overflow-x:hidden;
+  color:#222;
+}
+
+/* BACKGROUND */
+
+.bg-animation{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+
+  background:
+  radial-gradient(circle at top left, rgba(108,99,255,0.22), transparent 30%),
+  radial-gradient(circle at bottom right, rgba(0,212,255,0.18), transparent 30%),
+  radial-gradient(circle at center, rgba(255,110,199,0.15), transparent 35%),
+  linear-gradient(to bottom,#f8f9ff,#eef4ff);
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:14px 8%;
+
+  background:rgba(255,255,255,0.75);
+
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid rgba(255,255,255,0.5);
+
+  box-shadow:
+  0 5px 25px rgba(108,99,255,0.08);
+}
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+
+  filter:
+  drop-shadow(0 0 18px rgba(108,99,255,0.25));
+}
+
+.logo span{
+  font-size:28px;
+  font-weight:800;
+
+  background:linear-gradient(
+    to right,
+    #6c63ff,
+    #00d4ff,
+    #ff6ec7
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* HOME BUTTON */
+
+.home-btn{
+  width:55px;
+  height:55px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+
+  background:linear-gradient(
+    135deg,
+    #6c63ff,
+    #00d4ff,
+    #ff6ec7
+  );
+
+  color:white;
+
+  font-size:26px;
+
+  box-shadow:
+  0 10px 25px rgba(108,99,255,0.18);
+
+  transition:.3s;
+}
+
+.home-btn:hover{
+  transform:translateY(-4px) scale(1.05);
+}
+
+/* HERO */
+
+.support-hero{
+  padding:90px 8% 60px;
+  text-align:center;
+}
+
+.support-hero h1{
+  font-size:65px;
+  line-height:1.1;
+  margin-bottom:25px;
+
+  background:linear-gradient(
+    to right,
+    #6c63ff,
+    #00d4ff,
+    #ff6ec7
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.support-hero p{
+  font-size:18px;
+  color:#666;
+  max-width:800px;
+  margin:auto;
+  line-height:1.9;
+}
+
+/* SUPPORT GRID */
+
+.support-grid{
+  padding:20px 8% 100px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+  gap:30px;
+}
+
+/* CARD */
+
+.support-card{
+  background:rgba(255,255,255,0.75);
+
+  border:1px solid rgba(255,255,255,0.7);
+
+  border-radius:30px;
+
+  padding:35px;
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+  0 10px 25px rgba(108,99,255,0.08);
+
+  transition:.4s;
+}
+
+.support-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 20px 40px rgba(108,99,255,0.18);
+}
+
+.support-icon{
+  width:75px;
+  height:75px;
+
+  border-radius:24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:25px;
+
+  font-size:34px;
+
+  background:linear-gradient(
+    135deg,
+    #6c63ff,
+    #00d4ff,
+    #ff6ec7
+  );
+
+  color:white;
+}
+
+.support-card h2{
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.support-card p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.support-btn{
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+  border-radius:18px;
+
+  cursor:pointer;
+
+  font-size:15px;
+  font-weight:700;
+
+  color:white;
+
+  background:linear-gradient(
+    135deg,
+    #6c63ff,
+    #00d4ff,
+    #ff6ec7
+  );
+
+  box-shadow:
+  0 10px 25px rgba(108,99,255,0.18);
+
+  transition:.3s;
+}
+
+.support-btn:hover{
+  transform:scale(1.03);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+  .support-hero h1{
+    font-size:42px;
+  }
+
+  .logo span{
+    font-size:22px;
+  }
+
+  .logo img{
+    width:55px;
+    height:55px;
+  }
+
+  .home-btn{
+    width:48px;
+    height:48px;
+    font-size:22px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-animation"></div>
+
+<header>
+
+  <div class="logo">
+    <img src="logoo.png">
+    <span>LUXORA</span>
+  </div>
+
+  <a href="index.html" class="home-btn">
+    ⌂
+  </a>
+
+</header>
+
+<section class="support-hero">
+
+  <h1>
+    Luxora Support Center
+  </h1>
+
+  <p>
+    Kami siap membantu kebutuhan pelanggan Luxora
+    dengan layanan premium modern 24 jam.
+  </p>
+
+</section>
+
+<section class="support-grid">
+
+  <div class="support-card">
+
+    <div class="support-icon">
+      💬
+    </div>
+
+    <h2>Live Chat</h2>
+
+    <p>
+      Hubungi customer service secara realtime
+      dengan respon cepat dan modern.
+    </p>
+
+    <button class="support-btn">
+      Mulai Chat
+    </button>
+
+  </div>
+
+  <div class="support-card">
+
+    <div class="support-icon">
+      📦
+    </div>
+
+    <h2>Lacak Pesanan</h2>
+
+    <p>
+      Cek status pesanan dan pengiriman
+      produk Luxora dengan mudah.
+    </p>
+
+    <button class="support-btn">
+      Tracking
+    </button>
+
+  </div>
+
+  <div class="support-card">
+
+    <div class="support-icon">
+      🔒
+    </div>
+
+    <h2>Keamanan Akun</h2>
+
+    <p>
+      Bantuan keamanan akun dan perlindungan
+      transaksi pelanggan Luxora.
+    </p>
+
+    <button class="support-btn">
+      Security
+    </button>
+
+  </div>
+
+</section>
+
+</body>
+</html>
