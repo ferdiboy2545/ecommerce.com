@@ -300,13 +300,43 @@ const daftarProduk = [
   ),
 
   new ProdukPremium(
-  6,
-  "Studio Microphone",
-  1450000,
-  "Audio",
-  "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
-  "Noise Reduction"
-),
+    6,
+    "Studio Microphone",
+    1450000,
+    "Audio",
+    "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
+    "Noise Reduction"
+  ),
+
+  // =========================
+  // PRODUK BARU
+  // =========================
+
+  new ProdukPremium(
+    7,
+    "Gaming Laptop",
+    12500000,
+    "Laptop",
+    "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1200&auto=format&fit=crop",
+    "RTX Series"
+  ),
+
+  new Produk(
+    8,
+    "Smart Watch",
+    2200000,
+    "Gadget",
+    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
+  ),
+
+  new ProdukPremium(
+    9,
+    "PlayStation 5",
+    8500000,
+    "Console",
+    "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=1200&auto=format&fit=crop",
+    "DualSense Included"
+  ),
 
 ];
 
